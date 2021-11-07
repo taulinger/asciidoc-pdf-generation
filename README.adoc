@@ -10,7 +10,7 @@ It also uses the asciidoctor-diagram extension.
 
 === Usage
 
-[source,indent=2]
+[source]
 ----
 $ bash run.sh <my-ascii-doc-file>
 ----
@@ -20,3 +20,9 @@ which creates a `/dist` folder containing the Pdf file and other resources like 
 
 === Examples
 An example file and its dependencies can be found in `./src/asciidoc/`.
+
+Try it out by running:
+[source]
+----
+$ bash run.sh ./src/asciidoc/example.adoc
+----
