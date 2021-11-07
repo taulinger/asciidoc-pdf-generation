@@ -65,13 +65,21 @@ Alice <-- Bob: another authentication Response
 == Includes
 include::include.adoc[]
 
-Included PlantUML:
+Included PlantUML diagramms:
 
-[plantuml,foo]
-:config: plantUml.cfg
+as png:
+
+[plantuml, classes, png]
 ....
 include::classes.puml[]
 ....
+as svg:
+
+[plantuml, classes, svg]
+....
+include::classes.puml[]
+....
+
 == Attributes
 
 .Built-in
