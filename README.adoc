@@ -1,4 +1,4 @@
-= Asciidoctor Pdf Generation
+= Asciidoc Pdf Generation
 
 This repository contains a setup to generate a Pdf file from an Asciidoc file via the Asciidoctor Maven Plugin.
 It also uses the asciidoctor-diagram extension.  
