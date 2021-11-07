@@ -1,0 +1,85 @@
+= Example Manual
+Doc Writer <doc.writer@example.org>
+v1.0, 2014-09-09
+:example-caption!:
+ifndef::imagesdir[:imagesdir: images]
+:plantuml-config: plantUml.cfg
+
+This is a user manual for an example project.
+
+== Introduction
+
+This project does something.
+We just haven't decided what that is yet.
+
+## Admonitions
+
+[IMPORTANT] 
+.Feeding the Werewolves
+==== 
+While werewolves are hardy community members, keep in mind the following dietary concerns:
+
+. They are allergic to cinnamon.
+. More than two glasses of orange juice in 24 hours makes them howl in harmony with alarms and sirens.
+. Celery makes them sad.
+====
+
+## Source
+[source#hello,ruby]   
+---- 
+require 'sinatra'
+
+get '/hi' do
+  "Hello World!"
+end
+----
+
+## Sidebar
+
+.Optional Title
+****
+Sidebars are used to visually separate auxiliary bits of content
+that supplement the main text.
+
+TIP: They can contain any type of content.
+
+.Source code block in a sidebar
+[source,js]
+----
+const { expect, expectCalledWith, heredoc } = require('../test/test-utils')
+----
+****
+
+== Diagrams
+
+[plantuml,auth-protocol]
+....
+Alice -> Bob: Authentication Request
+Bob --> Alice: Authentication Response
+
+Alice -> Bob: Another authentication Request
+Alice <-- Bob: another authentication Response
+....
+
+
+== Includes
+include::include.adoc[]
+
+Included PlantUML:
+
+[plantuml,foo]
+:config: plantUml.cfg
+....
+include::classes.puml[]
+....
+== Attributes
+
+.Built-in
+asciidoctor-version:: {asciidoctor-version}
+safe-mode-name:: {safe-mode-name}
+docdir:: {docdir}
+docfile:: {docfile}
+imagesdir:: {imagesdir}
+
+
+

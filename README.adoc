@@ -1,0 +1,22 @@
+= Asciidoctor Pdf Generation
+
+This repository contains a setup to generate a Pdf file from an Asciidoc file via the Asciidoctor Maven Plugin.
+It also uses the asciidoctor-diagram extension.  
+
+=== Prerquisites
+
+- JRE/JDK 17 or later must be installed (https://adoptium.net/)
+- Maven must be installed (https://maven.apache.org/)
+
+=== Usage
+
+[source,indent=2]
+----
+$ bash run.sh <my-ascii-doc-file>
+----
+which creates a `/dist` folder containing the Pdf file and other resources like images.  
+
+
+
+=== Examples
+An example file and its dependencies can be found in `./src/asciidoc/`.
