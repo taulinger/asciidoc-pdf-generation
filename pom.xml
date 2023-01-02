@@ -18,17 +18,17 @@
             <plugin>
                 <groupId>org.asciidoctor</groupId>
                 <artifactId>asciidoctor-maven-plugin</artifactId>
-                <version>2.2.1</version>
+                <version>2.2.2</version>
                 <dependencies>
                     <dependency>
                         <groupId>org.asciidoctor</groupId>
                         <artifactId>asciidoctorj-diagram</artifactId>
-                        <version>2.2.1</version>
+                        <version>2.2.3</version>
                     </dependency>
                     <dependency>
                         <groupId>org.asciidoctor</groupId>
                         <artifactId>asciidoctorj-pdf</artifactId>
-                        <version>1.6.0</version>
+                        <version>2.3.4</version>
                     </dependency>
                 </dependencies>
                 <executions>
@@ -48,16 +48,19 @@
                                 <source-highlighter>coderay</source-highlighter>
                                 <icons>font</icons>
                                 <pagenums/>
-                                <toc/>
                                 <idprefix/>
                                 <idseparator>-</idseparator>
+                                <!--https://www.wimdeblauwe.com/blog/2019/2019-12-20-customization-of-asciidoctor-pdf-output/ -->
+                                <!--https://github.com/asciidoctor/asciidoctor-pdf/blob/main/docs/theming-guide.adoc -->
+                                <pdf-themesdir>${project.basedir}/src/asciidoc/theme</pdf-themesdir>
+                                <pdf-theme>custom-style.yml</pdf-theme>
                             </attributes>
                             <requires>
                                 <require>asciidoctor-diagram</require>
                             </requires>
                         </configuration>
                     </execution>
-<!--                    <execution>
+                    <!--                    <execution>
                         <id>output-html</id>
                         <phase>generate-resources</phase>
                         <goals>
