@@ -1,0 +1,20 @@
+## YAML Template.
+extends: default
+base:
+  font_family: Noto Serif
+heading-h1:
+  font-size: 12
+heading-h2:
+  font-size: 11
+heading-h3:
+  font-size: 10
+blockquote:
+  font_family: M+ 1mn
+  font-size: 11
+verse:  
+  font-size: 11
+  font-style: bold
+  font_family: M+ 1mn
+
+  
+  
